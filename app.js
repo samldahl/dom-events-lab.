@@ -24,6 +24,7 @@ Then its just 2 big ideas: showing stuff and holding stuff.
 const buttons = document.querySelectorAll('.button');
 const calculator = document.querySelector('#calculator');
 const displayText = document.getElementById('display-text');
+const audioPlayer = document.getElementById('audioPlayer');
 
 /*-------------------------------- Variables --------------------------------*/
 let current = '0';     // what’s in display
@@ -50,6 +51,7 @@ buttons.forEach((button) => {
       current = '0';
       previous = null;
       operator = null;
+      
       updateDisplay();
       return;
     }
@@ -81,6 +83,7 @@ buttons.forEach((button) => {
     }
 
     updateDisplay();
+    audioPlayer.play();
   });
 });
 
